@@ -22,6 +22,7 @@ exports.hook_data_post = function (next, connection) {
     var cfg = this.config.get('fcrdns.domaincheck.ini','ini')
 
     // Debug logging
+    connection.lognotice(cfg.main[domain])
     if (cfg.main[domain] !== undefined) {
         connection.loginfo(this, 'found domain ' + domain + ' in configuration file, looking for match: ' + (cfg.main[domain] || domain));
     }
