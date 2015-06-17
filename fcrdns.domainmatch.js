@@ -19,7 +19,7 @@ exports.hook_data_post = function (next, connection) {
     }
 
     // Load configuration file
-    var cfg = this.config.get('fcrdns.domaincheck.ini')
+    var cfg = this.config.get('fcrdns.domaincheck.ini','ini')
 
     // Debug logging
     if (cfg.main[domain] !== undefined) {
